@@ -1,0 +1,76 @@
+.dialog {
+    list-style-type: none;
+    padding: 0;
+    height: 100%;
+    overflow-y: scroll;
+}
+.message {
+    position: relative;
+    margin-bottom: 16px;
+}
+li.manager{
+  text-align: right;
+  margin-right: 5px;
+}
+
+li.client{
+  margin-left: 5px;
+}
+
+li.manager span.triangle{
+  transform: rotate(180deg);
+}
+
+li.client span.triangle{
+  left: -5px;
+}
+
+.message span.client,
+.message span.manager {
+    min-width: 100px;
+    display: inline-block;
+    padding: 16px;
+    border-radius: 5px;
+}
+span.client {
+    background: #EAF1FF;
+}
+span.manager {
+    background: #B4E7FF;
+}
+span.client .time {
+    position: absolute;
+    top: 0px;
+    left: 5px;
+
+    font-style: italic;
+    font-size: 12px;
+    color: rgb(180, 181, 184);
+}
+span.manager .time {
+    position: absolute;
+    top: 0px;
+    right: 5px;
+
+    font-style: italic;
+    font-size: 12px;
+    color: rgb(180, 181, 184);
+}
+.triangle {
+    position: absolute;
+    top: 50%;
+    width: 0;
+    height: 0;
+    padding: 0;
+    border: 0 solid transparent;
+    border-top-width: 5px;
+    border-bottom-width: 5px;
+    border-right: 5px solid black;
+    transform: translateY(-50%);
+}
+.client + .triangle {
+    border-right-color: #EAF1FF;
+}
+.manager + .triangle {
+    border-right-color: #B4E7FF;
+}

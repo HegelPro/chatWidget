@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Page Title</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+    #dialog {
+      height: 300px;
+      width: 400px;
+
+      overflow: scroll;
+    }
+  </style>
+</head>
+<body>
+  <ul id="dialog"></ul>
+
+  <input type="text" id="message">
+  <button id="submit">Submit</button>
+<script>
+// токен из базы данных
+var token = '54wak9'
+
+const messageEvents = { // события, которые будут отлавливаться 
+  'getDialog': function(data) {
+    addDialog(data)
+  },
+  'getLastMessage': function(data) {
+    addLastMassage(data)
+  },
+  'getAllClients': function(data) {
+    console.log(data)
+  }
+}
+
+////////
+
+const wsEvents = {
+  onMessage: function(event) {
+    const data = JSON.parse(event.data);
+      
+    this.messageEvents[data.event].call(this, data.data)
+  },
+  onOpen: function() {
+    this.send('getDialog', { token })
+    this.send('getAllClients')
+  },
+  onError: function() {
+    alert('Not Catched error')
+
+    throw new Error('Not Catched error')
+  },
+  onClone: function() {
+    alert('Close the contection with server')
+    
+    throw new Error('Close the contection with server')
+  }
+}
+
+
+class WSServer {
+  constructor(address, port) {
+    this.ws = new WebSocket("ws://" + address  + ':' + port)
+    this.messageEvents = messageEvents
+    this._setWsEvents()
+  }
+
+  _setWsEvents() {
+    this.ws.onmessage = wsEvents.onMessage.bind(this)
+    this.ws.onopen = wsEvents.onOpen.bind(this)
+    this.ws.onclose = wsEvents.onClone.bind(this)
+    this.ws.onerror = wsEvents.onError.bind(this)
+  }
+
+  on(event, func) {
+    this.messageEvents[event] = func
+  }
+
+  send(event, data) {
+    this.ws.send( JSON.stringify({
+      event,
+      data
+    }) )    
+  }
+}
+
+////////
+
+const wsServer = new WSServer("localhost", 5001)
+
+var getDialog = document.querySelector('#get-dialog')
+// getDialog.onclick = () => {
+//   wsServer.send('getDialog', { token }) // просьба получить диалог
+// }
+function addDialog(data) {
+  for(var message of data.dialog) {
+    var el = document.createElement('LI')
+    el.textContent = message.text
+    dialog.append(el)
+  }
+}
+
+function addLastMassage(data) {
+  var el = document.createElement('LI')
+  el.textContent = data.message.text
+  dialog.append(el)
+}
+
+submit.onclick = () => {
+  wsServer.send('addMessage', { 
+    token,
+    text: message.value
+  })
+
+  message.value = ""
+}
+
+</script>
+</body>
+</html>

@@ -1,0 +1,11 @@
+<form class="mb-4">
+  <hr>
+  <div class="form-row align-items-center">
+    <div class="col">
+      <input [(ngModel)]="message" type="text" name="message" class="form-control mb-2" [disabled]="needDisabled()" id="inlineFormInput" placeholder="Enter your message">
+    </div>
+    <div class="col-auto">
+      <button type="submit" class="btn btn-primary mb-2" (click)="sendMessage()" [disabled]="needDisabled()">Отправить</button>
+    </div>
+  </div>
+</form>

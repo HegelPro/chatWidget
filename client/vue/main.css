@@ -1,0 +1,193 @@
+html,
+body {
+  background: bisque;
+}
+
+.widget {
+  position: fixed;
+
+  width: 300px;
+
+  border-radius: 15px;
+}
+
+.widget--color-main > .widget__header {
+  background-color: #4badd1;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiM5NWRkZmYiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzAwN2RhMiIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%,color-stop(0, rgb(149, 221, 255)),color-stop(1, rgb(0, 125, 162)));
+  background-image: -webkit-repeating-linear-gradient(top left,rgb(149, 221, 255) 0%,rgb(0, 125, 162) 100%);
+  background-image: repeating-linear-gradient(to bottom right,rgb(149, 221, 255) 0%,rgb(0, 125, 162) 100%);
+  background-image: -ms-repeating-linear-gradient(top left,rgb(149, 221, 255) 0%,rgb(0, 125, 162) 100%);
+}
+
+.widget--color-2 > .widget__header{
+  background-color: #0292b6;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiMwMGM0ZjQiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iIzAzNjA3OCIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%,color-stop(0, rgb(0, 196, 244)),color-stop(1, rgb(3, 96, 120)));
+  background-image: -webkit-repeating-linear-gradient(top left,rgb(0, 196, 244) 0%,rgb(3, 96, 120) 100%);
+  background-image: repeating-linear-gradient(to bottom right,rgb(0, 196, 244) 0%,rgb(3, 96, 120) 100%);
+  background-image: -ms-repeating-linear-gradient(top left,rgb(0, 196, 244) 0%,rgb(3, 96, 120) 100%);
+}
+
+.widget--color-1 > .widget__header {
+  background-color: #d27edf;
+  background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIHZpZXdCb3g9IjAgMCAxIDEiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiPjxsaW5lYXJHcmFkaWVudCBpZD0idnNnZyIgZ3JhZGllbnRVbml0cz0idXNlclNwYWNlT25Vc2UiIHgxPSIwJSIgeTE9IjAlIiB4Mj0iMTAwJSIgeTI9IjEwMCUiPjxzdG9wIHN0b3AtY29sb3I9IiNhYzczZmUiIHN0b3Atb3BhY2l0eT0iMSIgb2Zmc2V0PSIwIi8+PHN0b3Agc3RvcC1jb2xvcj0iI2Y3ODljMCIgc3RvcC1vcGFjaXR5PSIxIiBvZmZzZXQ9IjEiLz48L2xpbmVhckdyYWRpZW50PjxyZWN0IHg9IjAiIHk9IjAiIHdpZHRoPSIxIiBoZWlnaHQ9IjEiIGZpbGw9InVybCgjdnNnZykiIC8+PC9zdmc+);
+  background-image: -webkit-gradient(linear, 0% 0%, 100% 100%,color-stop(0, rgb(172, 115, 254)),color-stop(1, rgb(247, 137, 192)));
+  background-image: -webkit-linear-gradient(top left,rgb(172, 115, 254) 0%,rgb(247, 137, 192) 100%);
+  background-image: linear-gradient(to bottom right,rgb(172, 115, 254) 0%,rgb(247, 137, 192) 100%);
+  background-image: -ms-linear-gradient(top left,rgb(172, 115, 254) 0%,rgb(247, 137, 192) 100%);
+}
+
+.widget--right {
+  right: 1em;
+  bottom: 1em;
+}
+
+.widget--left {
+  left: 1em;
+  bottom: 1em;
+}
+
+.widget--center {
+  left: 50%;
+  bottom: 1em;
+  transform: translateX(-50%);
+}
+
+.widget--close {
+  height: 100px;
+  width: 300px;
+}
+
+.widget__header {
+  height: 50px;
+  position: relative;
+  z-index: 1;
+
+  border-radius: 15px 15px 0 0;
+  box-shadow: 0px 4px 10px -2px black;
+}
+
+.widget__header--text-big {
+  font-size: 20px;
+  font-weight: bold;
+  color: rgb(250, 66, 90);
+}
+
+.widget__header--text-middle {
+  font-size: 12px;
+  color: rgb(255, 255, 255);
+}
+
+.widget__header__icon {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  top: -10px;
+  border-radius: 50%;
+  border: 4px solid #fff;
+  box-shadow: 0px 1px 4px 0px black;
+}
+
+.widget__body {
+  height: 350px;
+  position: relative;
+  background: #fff;
+  border-radius: 0 0 15px 15px;
+
+  overflow: hidden;
+}
+
+.widget__dialog {
+  max-height: 100%;
+  overflow-y: auto;
+}
+
+.widget__dialog__request {
+  font-size: .8 em;
+  font-style: italic;
+}
+
+.widget__message-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.widget__message {
+  margin: 10px 0;
+  overflow: hidden;
+}
+.widget__message__text {
+  padding: 5px 15px;
+  max-width: 75%;
+  font-size: .8em;
+  word-wrap: break-word;
+  float: right;
+  clear: both;
+  border-radius: 25px;
+  position: relative;
+  margin-bottom: 1px;
+}
+.widget__message--left > .widget__message__text {
+  margin-right: 70px;
+  margin-left: 20px;
+  background-color: #e5e5ea;
+  float: left;
+}
+.widget__message--right > .widget__message__text {
+  margin-left: 70px;
+  margin-right: 20px;
+  background-color: #36a9fc;
+  color: #fff;
+  float: right;
+}
+
+.widget__message__text:last-child:before,
+.widget__message__text:last-child:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 35px;
+  height: 25px;
+}
+
+.widget__message--right > .widget__message__text:before,
+.widget__message--right > .widget__message__text:after {
+  border-radius: 0 0 0 50%;
+}
+.widget__message--right > .widget__message__text:before {
+  height: 20px;
+  right: -23px;
+  background-color: #36a9fc;
+}
+.widget__message--right > .widget__message__text:after {
+  right: -35px;
+  bottom: -3px;
+  background-color: #fff;
+}
+
+
+.widget__message--left > .widget__message__text:before,
+.widget__message--left > .widget__message__text:after {
+  border-radius: 0 0 50% 0;
+}
+.widget__message--left > .widget__message__text:before {
+  height: 20px;
+  left: -23px;
+  background-color: #e5e5ea;
+}
+.widget__message--left > .widget__message__text:after {
+  left: -35px;
+  bottom: -3px;
+  background-color: #fff;
+}
+
+.fade-enter-active, 
+.fade-leave-active {
+  transition: height .5s;
+}
+.fade-enter, 
+.fade-leave-to {
+  height: 0px;
+}

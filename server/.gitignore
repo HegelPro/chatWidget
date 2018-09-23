@@ -1,0 +1,11 @@
+node_modules/
+
+# src/classes/
+
+# assets/
+
+package-lock.json
+
+# database/
+
+src/config/
