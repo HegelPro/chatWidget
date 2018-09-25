@@ -103,11 +103,13 @@ const widgetDialog = {
       class="widget__message-list"
       ref="messages"
     >
-      <widget-message 
-        :message="message" 
-        v-for='(message, index) in dialog' 
-        :key="index"
-      ></widget-message>
+      <transition-group tag="div" class="img-slider" name="slide">
+        <widget-message 
+          :message="message" 
+          v-for='(message, index) in dialog' 
+          :key="index"
+        ></widget-message>
+      </transition-group>
     </ul>
   </div>`,
   data () {
@@ -134,8 +136,9 @@ const widgetDialog = {
     widgetMessage
   },
   updated () {
-    if(this.$refs.messages && this.$refs.messages.children.length > 0) {
-      this.$refs.messages.children[this.$refs.messages.children.length - 1].scrollIntoView()
+    var messages = this.$refs.messages.children[0].children
+    if(messages && messages.length > 0) {
+      messages[messages.length - 1].scrollIntoView()
     }
   }
 }
@@ -291,5 +294,5 @@ class WSServer {
 
 ////
 
+// var wsServer = new WSServer("93.171.10.54", 5000)
 var wsServer = new WSServer("localhost", 5000)
-

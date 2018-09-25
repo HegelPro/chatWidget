@@ -8,7 +8,7 @@ body {
 
   width: 300px;
 
-  border-radius: 15px;
+  border-radius: 8px;
 }
 
 .widget--color-main > .widget__header {
@@ -64,7 +64,7 @@ body {
   position: relative;
   z-index: 1;
 
-  border-radius: 15px 15px 0 0;
+  border-radius: 8px 8px 0 0;
   box-shadow: 0px 4px 10px -2px black;
 }
 
@@ -93,7 +93,7 @@ body {
   height: 350px;
   position: relative;
   background: #fff;
-  border-radius: 0 0 15px 15px;
+  border-radius: 0 0 8px 8px;
 
   overflow: hidden;
 }
@@ -132,14 +132,14 @@ body {
 .widget__message--left > .widget__message__text {
   margin-right: 70px;
   margin-left: 20px;
-  background-color: #e5e5ea;
+  background-color: #36a9fc;
+  color: #fff;
   float: left;
 }
 .widget__message--right > .widget__message__text {
   margin-left: 70px;
   margin-right: 20px;
-  background-color: #36a9fc;
-  color: #fff;
+  background-color: #e5e5ea;
   float: right;
 }
 
@@ -159,7 +159,7 @@ body {
 .widget__message--right > .widget__message__text:before {
   height: 20px;
   right: -23px;
-  background-color: #36a9fc;
+  background-color: #e5e5ea;
 }
 .widget__message--right > .widget__message__text:after {
   right: -35px;
@@ -175,7 +175,7 @@ body {
 .widget__message--left > .widget__message__text:before {
   height: 20px;
   left: -23px;
-  background-color: #e5e5ea;
+  background-color: #36a9fc;
 }
 .widget__message--left > .widget__message__text:after {
   left: -35px;
@@ -190,4 +190,14 @@ body {
 .fade-enter, 
 .fade-leave-to {
   height: 0px;
+}
+
+.slide-enter-active {
+  transition: 0.5s;
+}
+.slide-enter {
+  opacity: 0;
+}
+.slide-leave-to {
+  opacity: 0; 
 }
