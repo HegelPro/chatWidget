@@ -1,8 +1,8 @@
 # ChatWidget
 
 ## Посмотреть приложение можно по ссылке:
-* [Widget](http://93.171.10.54:8080/support-widget/widget/)
-* [Manager](http://93.171.10.54:8080/support-widget/manager/)
+* [Widget](http://194.146.38.143:8080/chat-client/)
+* [Manager](http://194.146.38.143:8080/chat-manager/)
 
 ## Что представляет собой приложение?
 ### Виджет часть
